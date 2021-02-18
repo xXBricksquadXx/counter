@@ -1,7 +1,12 @@
-import { SimpleComponent } from "./components";
-
+import { NavBar, SimpleComponent, StatefulComponent } from "./components";
+console.log(StatefulComponent);
 function App() {
-  return <SimpleComponent name="Taylor" />;
+  return (
+    <>
+      <NavBar />
+      <SimpleComponent name="Taylor" />
+    </>
+  );
 }
 
 export default App;

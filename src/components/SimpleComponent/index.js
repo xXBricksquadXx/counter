@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 console.log(PropTypes);
 
-function SimpleComponent(props) {
-  return <p>Hello {props.name}</p>;
+function SimpleComponent({ name }) {
+  return <p>Hello {name}</p>;
 }
 
 SimpleComponent.propTypes = {
