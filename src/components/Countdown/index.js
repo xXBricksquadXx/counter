@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import Form from "./Form";
 
+// This fxn. is not dependent on any state in the component
+function handleSubmit(ev) {
+  ev.preventDefault();
+  console.log("submitted!");
+}
+
 const Component = () => {
   const [timeRemaining, setTimeRemaining] = useState(10);
 
@@ -17,7 +23,7 @@ const Component = () => {
 
   return (
     <>
-      <Form />
+      <Form submitHandler={handleSubmit} />
       <p className="mt-4 text-6xl text-center">{timeRemaining} seconds</p>
     </>
   );
