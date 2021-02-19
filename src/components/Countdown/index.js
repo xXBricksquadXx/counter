@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
 import Form from "./Form";
 
-// This fxn. is not dependent on any state in the component
-function handleSubmit(ev) {
-  ev.preventDefault();
-  console.log("submitted!");
-}
-
 const Component = () => {
-  const [timeRemaining, setTimeRemaining] = useState(10);
+  const [timeRemaining, setTimeRemaining] = useState(0);
+
+  function handleSubmit(ev) {
+    ev.preventDefault();
+
+    setTimeRemaining(() => ev.target.elements[0].value);
+  }
 
   // It is a reference to any side effects - such as re-rendering.
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimeRemaining(() => timeRemaining - 1);
-    }, 1000);
+    if (timeRemaining > 0) {
+      const intervalId = setInterval(() => {
+        setTimeRemaining(() => timeRemaining - 1);
+      }, 1000);
 
-    return () => {
-      clearInterval(intervalId);
-    };
+      return () => {
+        clearInterval(intervalId);
+      };
+    }
   });
 
   return (

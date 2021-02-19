@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 
 const Form = ({ submitHandler }) => {
-  console.log(submitHandler);
-
   return (
     <form
       className="container mx-auto flex flex-col items-center pt-4"
