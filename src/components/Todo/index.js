@@ -6,7 +6,11 @@ const Todo = () => {
   function handleSubmit(ev) {
     ev.preventDefault();
 
-    console.log("submit");
+    // TODO: Update state with whatever we typed
+    setTodoList((prevTodoList) => [
+      ...prevTodoList,
+      ev.target.elements[0].value,
+    ]);
   }
 
   return (
