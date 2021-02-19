@@ -26,7 +26,17 @@ const Component = () => {
   return (
     <>
       <Form submitHandler={handleSubmit} />
-      <p className="mt-4 text-6xl text-center">{timeRemaining} seconds</p>
+
+      {/* TODO: If timeRemaining < 3, make this text red. */}
+      <p
+        className={`mt-4 text-6xl text-center ${
+          timeRemaining <= 3 && timeRemaining > 0
+            ? "animate-ping text-red-500"
+            : ""
+        }`}
+      >
+        {timeRemaining}
+      </p>
     </>
   );
 };
