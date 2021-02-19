@@ -1,3 +1,4 @@
+export { default as Countdown } from "./Countdown";
 export { default as NavBar } from "./NavBar";
-export { default as SimpleComponent } from "./SimpleComponent";
-export { default as StatefulComponent } from "./StatefulComponent";
+export { default as Simple } from "./SimpleComponent";
+export { default as Stateful } from "./StatefulComponent";
