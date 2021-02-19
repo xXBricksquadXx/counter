@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Form from "./Form";
 
 const Component = () => {
   const [timeRemaining, setTimeRemaining] = useState(10);
@@ -14,7 +15,12 @@ const Component = () => {
     };
   });
 
-  return <p>{timeRemaining} seconds</p>;
+  return (
+    <>
+      <Form />
+      <p className="mt-4 text-6xl text-center">{timeRemaining} seconds</p>
+    </>
+  );
 };
 
 export default Component;
