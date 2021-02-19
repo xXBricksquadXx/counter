@@ -7,7 +7,7 @@ function NavBar() {
         <li>
           <Link
             to="/simple-component"
-            className="text-indigo-700  hover:text-opacity-100 transition duration-150 ease-in-out"
+            className="text-indigo-700 hover:text-opacity-100 transition duration-150 ease-in-out"
           >
             Simple
           </Link>
@@ -15,7 +15,7 @@ function NavBar() {
         <li>
           <Link
             to="/stateful-component"
-            className="text-indigo-700  hover:text-opacity-100 transition duration-150 ease-in-out"
+            className="text-indigo-700 hover:text-opacity-100 transition duration-150 ease-in-out"
           >
             Stateful
           </Link>
@@ -23,9 +23,17 @@ function NavBar() {
         <li>
           <Link
             to="/countdown"
-            className="text-indigo-700  hover:text-opacity-100 transition duration-150 ease-in-out"
+            className="text-indigo-700 hover:text-opacity-100 transition duration-150 ease-in-out"
           >
             Countdown
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/todo"
+            className="text-indigo-700 hover:text-opacity-100 transition duration-150 ease-in-out"
+          >
+            Todo
           </Link>
         </li>
       </ul>

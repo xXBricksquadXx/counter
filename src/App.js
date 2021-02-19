@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Countdown, NavBar, Simple, Stateful } from "./components";
+import { Countdown, NavBar, Simple, Stateful, Todo } from "./components";
 
 function App() {
   return (
@@ -17,6 +17,10 @@ function App() {
 
         <Route path="/countdown">
           <Countdown />
+        </Route>
+
+        <Route path="/todo">
+          <Todo />
         </Route>
       </Switch>
     </Router>
